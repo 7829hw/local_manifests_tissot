@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="hwkim" fetch="https://github.com/7829hw" revision="refs/heads/lineage-24.0" />
+
+  <project path="device/xiaomi/tissot" name="android_device_xiaomi_tissot" remote="hwkim" />
+  <project path="device/xiaomi/msm8953-common" name="android_device_xiaomi_msm8953-common" remote="hwkim" />
+  <project path="kernel/xiaomi/msm8953" name="android_kernel_xiaomi_tissot" remote="hwkim" />
+  <project path="vendor/xiaomi/tissot" name="vendor_xiaomi_tissot" remote="hwkim" />
+  <project path="vendor/xiaomi/msm8953-common" name="vendor_xiaomi_msm8953-common" remote="hwkim" />
+
+  <!-- Dependencies not part of the default LineageOS manifest.
+       remove-project is optional so that other device manifests defining the same projects can coexist. -->
+  <remove-project name="LineageOS/android_hardware_xiaomi" optional="true" />
+  <remove-project name="LineageOS/android_hardware_sony_timekeep" optional="true" />
+  <project path="hardware/xiaomi" name="LineageOS/android_hardware_xiaomi" remote="github" />
+  <project path="hardware/sony/timekeep" name="LineageOS/android_hardware_sony_timekeep" remote="github" />
+</manifest>
